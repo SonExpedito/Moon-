@@ -1,0 +1,52 @@
+Filme 1
+Nome: Homem Aranha no Aranhaverso
+Descrição: Miles Morales é um jovem negro do Brooklyn que se tornou o Homem-Aranha. 
+Video: https://embedder.net/e/tt4633694
+
+Filmes 2
+Nome : Loki
+Descrição: Após roubar o Tesseract em "Vingadores: Ultimato", Loki conhece a Autoridade de Variância Temporal.
+Video: https://embedder.net/e/tt15046608
+
+Filme 3
+Nome: Encanto
+Descrição:Uma garota chamada Mirabel Madrigal cresce como o único membro não mágico de sua família.
+video:https://embedder.net/e/tt2953050
+
+Filme 4
+Nome: Star Wars o Despertar da Força
+descriçãoA queda de Darth Vader e do Império levou ao surgimento de uma nova força sombria: a Primeira Ordem.
+Video:https://embedder.net/e/tt2488496
+
+Filme 5
+Nome: Frozen II
+Descrição:Aventuram na floresta encantada e nos mares escuros além de Arendelle
+Video: https://embedder.net/e/tt4520988
+
+
+Filme 6
+Nome: X-MEN'97
+Descrição: A continuação das aventuras dos melhores super-heróis os "X-MEN".
+Video:https://embedder.net/e/tt21350562
+
+Filme 7
+Nome: Fallout
+Descrição: Após o mundo acabar, aqueles que sobreviveram devem achar condições e suprimentos.
+video: https://embedder.net/e/tt16957590
+
+Filme 8
+Nome: Planeta dos Macacos
+descrição: Várias gerações no futuro, após o reinado de César, os macacos são agora a espécie dominante.
+Video: https://embedder.net/e/tt11389872
+
+
+Filme 9
+Nome: Top-Gun Maverick
+Descrição: Depois de mais de 30 anos, Pete "Maverick" Mitchell está de volta
+Video:https://embedder.net/e/tt1745960
+
+Filme 10
+Nome: Barbie
+Descrição
+Video:No mundo mágico das Barbies, "Barbieland", uma não se encaixa como as outras.
+https://embedder.net/e/tt1517268

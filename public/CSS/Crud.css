@@ -1,0 +1,71 @@
+body {
+    background-color: #0b0c0d;
+    color: white;
+}
+
+.subtitle {
+    color: #bbbbbb;
+}
+
+.logo {
+    height: 80px;
+    position: absolute;
+    transform: scale(200%);
+}
+
+.logo-link {
+    position: absolute;
+    display: block;
+    height: 80px;
+    /* or whatever height you need */
+    width: auto;
+}
+
+.custom-input {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    width: 250px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.custom-input:focus {
+    width: 100%;
+    border-color: #1f80e0;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 50px;
+    }
+
+    .logo-link {
+        height: 50px;
+    }
+}
+
+@media (max-width: 582px) {
+    .logo {
+        display: none;
+    }
+
+    .logo-link {
+        display: none;
+    }
+}
+
+.custom-thumbnail {
+    height: 120px;
+}
+
+@media(max-width:768px) {
+    .custom-thumbnail {
+        height: 80px;
+    }
+}
