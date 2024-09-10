@@ -614,40 +614,42 @@ body {
 }
 
 /* Estilos para o dropdown */
-.profile-container {
+.dropdown {
   position: relative;
+  display: inline-block;
 }
 
-.dropdown-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-menu {
+.dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
   right: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 150px;
-  z-index: 1000;
+  background-color: #cfcccc;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px;
-  color: #333;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f0f0f0;
-}
-
-.dropdown.active .dropdown-menu {
   display: block;
+}
+
+.dropdown-content a:hover {background-color: #cfcccc;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .profile-avatar {
+  background-color: #cfcccc;
+}
+
+
+.profile-avatar-img {
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  height: 40px; /* Ajuste o tamanho conforme necessário */
+  object-fit: cover; /* Garante que a imagem se ajuste ao tamanho sem distorção */
+  border-radius: 50%; /* Torna a imagem circular */
 }

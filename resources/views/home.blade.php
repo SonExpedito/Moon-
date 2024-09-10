@@ -27,11 +27,23 @@
         </div>
 
         <div class="right-container">
-            <a href="#" class="user-name"> Olá, {{ auth()->user()->name }}!</a>
-            <img src="/img/default.png" alt="" class="profile-avatar">
-            <div class="bx bx-menu" id="menu-icon"></div>
+            <a href="#" class="user-name">Olá, {{ auth()->user()->name }}!</a>
+            <!-- Adicionando o dropdown -->
+            <div class="dropdown">
+                <a href="#" class="profile-avatar" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <img src="/img/default.png" alt="" class="profile-avatar-img">
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                <div class="dropdown-content">
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                </div>
+            </div>
 
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
+
     </nav>
 
     <section class="banner">
@@ -41,13 +53,11 @@
                     <div class="slider-content">
                         <h1 class="movie-title">LUCA</h1>
                         <p class="movie-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis a iste nobis unde fuga ea, assumenda dolorum enim mollitia necessitatibus consequatur doloremque veniam vel perferendis eveniet harum nisi, rem aliquam!</p>
-
                     </div>
                     <img src="/img/slider 5.png" alt="">
                 </div> -->
             </div>
         </div>
-
     </section>
 
     <section class="cards">
@@ -68,7 +78,6 @@
                 <img src="/img/marvel.png" alt="" class="video-card-image">
                 <video src="/videos/marvel.mp4" class="card-video" loop autoplay muted></video>
             </div>
-
             <div class="video-card">
                 <img src="/img/geographic.png" alt="" class="video-card-image">
                 <video src="/videos/geographic.mp4" class="card-video" loop autoplay muted></video>
@@ -86,7 +95,6 @@
                 @if (count($filmes) > 0)
                 @csrf
                 @foreach ($filmes as $film)
-                <!-- Se houver filmes disponíveis, itere sobre eles -->
                 <div class="media">
                     <img src="/img/filmes/{{$film->image}}" alt="" class="media-img">
                     <div class="media-info">
@@ -94,17 +102,15 @@
                         <h6 class="media-desc">{{$film->descricao}}</h6>
                         <div class="icons">
                             <button class="watch-btn" onclick="openPopup('{{ $film->titulo }}', '{{ $film->descricao }}', '{{ $film->video }}')">Assistir</button>
-                            <!-- Verificar se $film está definido antes de acessar suas propriedades -->
                             @if (isset($film->id))
-
                             @if ($film->favorito)
                             <form action="/desfavoritar/{{$film->id}}" method="post">
-                                @csrf <!-- Adicione isso se estiver usando Laravel para evitar erros de CSRF -->
+                                @csrf
                                 <button type="submit" class="favorite"><i class='bx bxs-heart'></i></button>
                             </form>
                             @else
                             <form action="/favoritar/{{$film->id}}" method="post">
-                                @csrf <!-- Adicione isso se estiver usando Laravel para evitar erros de CSRF -->
+                                @csrf
                                 <button type="submit" class="favorite"><i class='bx bx-heart'></i></button>
                             </form>
                             @endif
@@ -114,7 +120,6 @@
                 </div>
                 @endforeach
                 @else
-                <!-- Se não houver filmes disponíveis, exiba uma mensagem alternativa -->
                 <div class="media">
                     <img src="/img/posters/erro.png" alt="" class="media-img">
                     <div class="media-info">
@@ -130,19 +135,14 @@
             </div>
         </div>
 
-        <!-- Pop-up de Detalhes do Filme -->
         <div id="popup" class="popup" style="display:none;">
             <h2>Detalhes do Filme</h2>
             <p class="popupTitulo1"><strong>Título:</strong> <span id="popupTitulo"></span></p>
-
-
             <a href="#" id="popupVideo" target="_blank">Assistir Trailer</a>
             <p><strong>Descrição:</strong> <span id="popupDescricao"></span></p>
             <button onclick="closePopup()">Fechar</button>
         </div>
 
-
-        <!----------------------FAVORITOS---------------------------------------------------------------------------------->
         <h1 class="title-section">Favoritos</h1>
         <div class="media-list">
             <button class="prev-btn"><img src="/img/pre.png" alt=""></button>
@@ -152,7 +152,6 @@
                 @csrf
                 @if (count($filmes) > 0)
                 @foreach ($filmes as $film)
-                <!-- Verificar se o filme é favorito antes de exibi-lo -->
                 @if ($film->favorito)
                 <div class="media">
                     <img src="/img/filmes/{{$film->image}}" alt="" class="media-img">
@@ -162,7 +161,7 @@
                         <div class="icons">
                             <button class="watch-btn" onclick="openPopup('{{ $film->titulo }}', '{{ $film->descricao }}', '{{ $film->video }}')">Assistir</button>
                             <form action="/desfavoritar/{{$film->id}}" method="post">
-                                @csrf <!-- Adicione isso se estiver usando Laravel para evitar erros de CSRF -->
+                                @csrf
                                 <button type="submit" class="favorite"><i class='bx bxs-heart'></i></button>
                             </form>
                         </div>
@@ -228,8 +227,8 @@
             window.onload = function alterarNomeEImagem() {
                 var imagens = ['/img/perfil.png', '/img/perfil2.png', '/img/perfil3.png', '/img/perfil4.png', '/img/perfil5.png'];
                 var novaImagem = escolherAleatoriamente(imagens);
-                // Atualizar elementos HTML com o nome e a imagem selecionados aleatoriamente
-                var profileAvatar = document.querySelector('.profile-avatar');
+                // Atualizar elementos HTML com a imagem selecionada aleatoriamente
+                var profileAvatar = document.querySelector('.profile-avatar-img');
                 profileAvatar.src = novaImagem;
             }
         </script>
