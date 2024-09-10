@@ -67,7 +67,7 @@ class FilmesController extends Controller
 
 
         $filme->save();
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
     public function editar($id)
@@ -102,7 +102,7 @@ class FilmesController extends Controller
             'video' => $req->video
         ]);
 
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
     public function excluir($id)
