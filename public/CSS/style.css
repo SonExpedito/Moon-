@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 body {
@@ -29,13 +28,11 @@ body {
   z-index: 9;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .brand-logo {
-  width: 50px;
-  height: 45px;
-  transform: scale(263%) translateY(5%);
+    height: 100%;
+    transform: translateY(10%);
 }
 
 .nav-links {
@@ -61,11 +58,14 @@ body {
 
 .left-container {
   display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .right-container {
   margin-top: 0.9em;
   display: flex;
+  height: 100%;
   padding-right: 6%;
   align-items: center;
 }
@@ -366,8 +366,13 @@ body {
   left: 0;
   z-index: 2;
   background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #0c111b 90%);
-  padding-left: 5%;
+  padding-left: 2%;
+  padding-top: 47%;
   transition: 0.5s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .media-name {
@@ -375,7 +380,6 @@ body {
   font-size: 15px;
   font-family: 500;
   text-transform: capitalize;
-  margin-top: 60%;
 }
 
 
@@ -386,20 +390,22 @@ body {
   margin: 5px 0;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.4; /* Ajuste conforme necessário */
-  max-height: 4.2em; /* Ajuste conforme necessário para controlar a altura */
-  
+  line-height: 1.4;
+  /* Ajuste conforme necessário */
+  max-height: 4.2em;
+  /* Ajuste conforme necessário para controlar a altura */
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: normal; /* Permite múltiplas linhas */
+  white-space: normal;
+  /* Permite múltiplas linhas */
+  display: flex;
+
 }
 
 
 
 .icons {
   display: flex;
-  position: absolute;
-  top: 81%;
 }
 
 .favorite {
@@ -649,7 +655,7 @@ body {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
 }
 
 .dropdown:hover .profile-avatar {
