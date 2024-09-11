@@ -30,13 +30,14 @@
             <a href="#" class="user-name">Olá, {{ auth()->user()->name }}!</a>
             <!-- Adicionando o dropdown -->
             <div class="dropdown">
-                <a href="#" class="profile-avatar" >
+                <a href="#" class="profile-avatar">
                     <img src="/img/default.png" alt="" class="profile-avatar-img">
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
                 <div class="dropdown-content">
+                    <a href="/profile">Perfil</a>
                     <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                 </div>
             </div>
