@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/Fundo.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.img-netflixIcon {
+    height: 10vw; /* Tamanho relativo à largura da tela */
+    margin-left: 5vw;
+}
+
+.topSide {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 20vh; /* Unidade relativa à altura da tela */
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #757575;
+    position: relative;
+    z-index: 1;
+}
+
+.footWidth {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.footLay {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.footLay li {
+    list-style: none;
+}
+
+.footList {
+    width: 25%;
+    margin-top: 1rem;
+}
+
+.footLink {
+    text-decoration: none;
+    color: #757575;
+    font-size: 0.9rem;
+}
+
+.footLink:hover {
+    text-decoration: underline;
+}
+
+.login-card {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px; /* Largura máxima para telas maiores */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.login-card h1 {
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.userInput {
+    margin-bottom: 1.5rem;
+}
+
+.userInput input {
+    width: 100%;
+    height: 2.5rem;
+    background-color: transparent;
+    color: white;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    outline: none;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.userInput input::placeholder {
+    color: #999;
+}
+
+.btn-login {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #1f80e0;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.remMe {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.cText {
+    color: #b3b3b3;
+}
+
+.cLink {
+    color: #737373;
+}
+
+.sLink {
+    color: white;
+    text-decoration: none;
+}
+
+.sLink:hover {
+    text-decoration: underline;
+}
+
+.fb {
+    color: #3b5998;
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.fb {
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.login2 {
+    margin: 2rem 0 1rem 0;
+    color: #8c8c8c;
+}
+
+.signUp {
+    margin-bottom: 1rem;
+    color: #8c8c8c;
+}
+
+.google {
+    font-size: 0.9rem;
+    color: #8c8c8c;
+}
+
+.google a {
+    text-decoration: none;
+}
+
+.google a:hover {
+    text-decoration: underline;
+}
+
+.tel-link {
+    text-decoration: none;
+    color: #757575;
+}
+
+.tel-link:hover {
+    text-decoration: underline;
+}
+
+.select-language {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-size: 1rem;
+    background-position: calc(100% - 0.5rem) center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #757575;
+    padding: 0.75rem 1.25rem;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    min-height: 2.5rem;
+    border: 1px solid #333;
+}
+
+.select-language option {
+    padding-left: 0.75rem;
+}
+
+@media screen and (max-width: 740px) {
+    body {
+        background: black;
+    }
+
+    .img-netflixIcon {
+        margin-left: 5vw;
+        height: 15vw;
+    }
+
+    .login-card {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .parent-login {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .footer {
+        border-top: 1px solid #737373;
+    }
+
+    .topSide {
+        padding-bottom: 20vh;
+    }
+
+    .footList {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footList {
+        width: 50%;
+    }
+}

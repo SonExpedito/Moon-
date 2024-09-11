@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(8, 8, 8, 0.89);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  background-color: transparent;
+  position: relative;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.logo img {
+  height: 80px;
+  transform: scale(200%);
+}
+li{
+    list-style: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button-style {
+  background-color: #1f80e0;
+  color: white;
+  padding: 7px 17px;
+  border-radius: 3px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 710px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../img/fundo2.jpg') center/cover;
+  color: white;
+}
+
+.area h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.area h3 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.search {
+  display: flex;
+  margin-top: 20px;
+}
+
+.box {
+  padding: 15px;
+  flex: 1;
+  font-size: 18px;
+}
+
+.try {
+  display: flex;
+  align-items: center;
+  background-color: #1f80e0;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 375px;
+  background-color: black;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footercon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50px;
+  background-color: transparent;
+}
+
+.footer .flex1 {
+  color: #999;
+  justify-content: space-around;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 17px;
+  min-height: 30px;
+}
+
+.footer .flex1 h5 {
+  align-self: flex-start;
+}
+
+.list1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: flex-start;
+  align-self: center;
+  justify-content: center;
+  min-height: 50px;
+  font-size: 13px;
+  padding: 0px 70px;
+  text-align: left;
+}
+
+.list1 li {
+  font-size: 13px;
+  margin: 7px -10px;
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: center;
+  align-self: flex-start;
+  justify-content: center;
+}
+
+.list1 li a {
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+li a {
+  font-size: 13px;
+  text-align: center;
+  color: #999;
+}
+
+.footertxt {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.end {
+  width: 100%;
+  min-height: 50px;
+  background-color: black;
+  justify-content: space-around;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #999;
+  margin-top: -60px;
+}
+
+.end h2 {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+}
+
+/* Menu hamburguer */
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar .hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* Responsividade */
+@media (max-width: 980px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .navbar .menu a {
+    color: white;
+    font-size: 18px;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+
+  .navbar.active .menu {
+    display: flex;
+  }
+  
+  .logo img {
+    height: 60px;
+    transform: scale(150%);
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .main {
+    min-height: 500px;
+    padding: 20px;
+  }
+
+  .area h1 {
+    font-size: 36px;
+  }
+
+  .area h3 {
+    font-size: 18px;
+  }
+
+  .search {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .box, .try {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+
+  .list1 {
+    padding: 0 20px;
+  }
+
+  .end {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .end h2 {
+    font-size: 14px;
+  }
+}
